@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, type Location } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
 	AiFillHome,
 	AiFillWallet,
@@ -8,35 +8,35 @@ import {
 	AiFillSetting,
 } from "react-icons/ai";
 
+const activeStyle = {
+	opacity: 1,
+};
+
 const Navigation: React.FC = () => {
-	const location = useLocation();
-
-	const calcOpacity = (path: string) => {
-		return location.pathname === `/${path}` ? 1 : undefined;
-	};
-
 	return (
 		<nav className="fixed bottom-0 left-0 h-16 w-screen">
 			<ul className="flex flex-row items-center justify-between px-8">
 				<li className="flex flex-col justify-center">
-					<button
+					<NavLink
+						to="/"
 						className="opacity-30 transition-opacity hover:opacity-100"
-						style={{
-							opacity: calcOpacity(""),
-						}}
+						style={({ isActive }) =>
+							isActive ? activeStyle : undefined
+						}
 					>
 						<AiFillHome size={25} />
-					</button>
+					</NavLink>
 				</li>
 				<li className="flex flex-col justify-center">
-					<button
+					<NavLink
+						to="/wallet"
 						className="opacity-30 transition-opacity hover:opacity-100"
-						style={{
-							opacity: calcOpacity("wallet"),
-						}}
+						style={({ isActive }) =>
+							isActive ? activeStyle : undefined
+						}
 					>
 						<AiFillWallet size={25} />
-					</button>
+					</NavLink>
 				</li>
 				<li className="flex flex-col justify-center">
 					<button className="flex flex-col justify-center drop-shadow">
@@ -44,24 +44,26 @@ const Navigation: React.FC = () => {
 					</button>
 				</li>
 				<li className="flex flex-col justify-center">
-					<button
+					<NavLink
+						to="/chart"
 						className="opacity-30 transition-opacity hover:opacity-100"
-						style={{
-							opacity: calcOpacity("chart"),
-						}}
+						style={({ isActive }) =>
+							isActive ? activeStyle : undefined
+						}
 					>
 						<AiFillPieChart size={25} />
-					</button>
+					</NavLink>
 				</li>
 				<li className="flex flex-col justify-center">
-					<button
+					<NavLink
+						to="/settings"
 						className="opacity-30 transition-opacity hover:opacity-100"
-						style={{
-							opacity: calcOpacity("settings"),
-						}}
+						style={({ isActive }) =>
+							isActive ? activeStyle : undefined
+						}
 					>
 						<AiFillSetting size={25} />
-					</button>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
