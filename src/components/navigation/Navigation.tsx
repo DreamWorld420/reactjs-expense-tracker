@@ -22,8 +22,8 @@ const Navigation: React.FC = () => {
 
 				{/* Add Button */}
 				<li className="flex flex-col justify-center">
-					<button className="flex flex-col justify-center drop-shadow">
-						<AiFillPlusCircle size={45} />
+					<button className="flex flex-col justify-center">
+						<AiFillPlusCircle size={45} className="drop-shadow" />
 					</button>
 				</li>
 
