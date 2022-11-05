@@ -4,8 +4,10 @@ import { Outlet } from "react-router-dom";
 
 const Root: React.FC = () => {
 	return (
-		<div className="pt-4">
-			<Outlet />
+		<div className="flex h-screen flex-col pt-4">
+			<section className="grow">
+				<Outlet />
+			</section>
 			<Navigation />
 		</div>
 	);
