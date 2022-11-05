@@ -7,6 +7,10 @@ module.exports = {
 				robotoMono: "'Roboto Mono', monospace",
 				oswald: "'Oswald', sans-serif",
 			},
+			colors: {
+				expense: "#f89708",
+				income: "#43e774",
+			},
 		},
 	},
 	plugins: [],
