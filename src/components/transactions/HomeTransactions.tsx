@@ -12,6 +12,7 @@ const HomeTransactions = () => {
 		);
 	}
 
+	// TODO: implement state when there are transactions
 	return null;
 };
 
