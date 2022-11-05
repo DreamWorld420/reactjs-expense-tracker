@@ -7,6 +7,7 @@ import {
 	AiFillSetting,
 } from "react-icons/ai";
 import NavListItem from "./NavListItem";
+import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
 	return (
@@ -23,12 +24,12 @@ const Navigation: React.FC = () => {
 
 					{/* Add Button */}
 					<li className="flex flex-col justify-center">
-						<button className="flex flex-col justify-center">
+						<Link className="flex flex-col justify-center" to="add">
 							<AiFillPlusCircle
 								size={45}
 								className="drop-shadow"
 							/>
-						</button>
+						</Link>
 					</li>
 
 					<NavListItem to="chart">

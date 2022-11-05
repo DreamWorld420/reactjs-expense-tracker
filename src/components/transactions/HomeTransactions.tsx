@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppSelector } from "app/hooks";
 
-const HomeTransactions = () => {
+const HomeTransactions: React.FC = () => {
 	const transactions = useAppSelector((state) => state.transactions.value);
 
 	if (!transactions.length) {

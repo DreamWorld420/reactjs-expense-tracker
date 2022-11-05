@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import AddTransaction from "./pages/AddTransaction";
 import Chart from "./pages/Chart";
 import Home from "./pages/Home";
 import Root from "./pages/Root";
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: "settings",
 				element: <Settings />,
+			},
+			{
+				path: "add",
+				element: <AddTransaction />,
 			},
 		],
 	},
