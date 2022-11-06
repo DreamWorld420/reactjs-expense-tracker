@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 import StatsCard from "components/stats/StatsCard";
 import HomeTransactions from "components/transactions/HomeTransactions";
+import currencyFormatter from "utils/currencyFormatter";
 
 const Home: React.FC = () => {
 	const balance = useSelector((state: RootState) => state.balance.value);
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
 	return (
 		<div className="flex grow flex-col">
 			<h1 className="mt-16 w-full text-center font-robotoMono text-4xl">
-				${balance.toPrecision(3).toString()}
+				{currencyFormatter(balance)}
 			</h1>
 			<section className="mt-16 flex grow flex-col px-8">
 				<section>
@@ -37,7 +38,7 @@ const Home: React.FC = () => {
 				</section>
 				<section className="mt-4 mb-12 flex grow flex-col">
 					<h2 className="mb-2 font-oswald tracking-wider">
-						Transactions
+						Last four transactions
 					</h2>
 					<HomeTransactions />
 				</section>

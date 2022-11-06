@@ -17,9 +17,9 @@ const StatsCard: React.FC<IProps> = ({
 	IconBG,
 }) => {
 	return (
-		<div className="flex grow items-center gap-x-2 rounded-2xl bg-white py-2 px-4 shadow-2xl">
+		<div className="flex grow items-center gap-x-2 rounded bg-white py-2 px-4 shadow-2xl">
 			<div
-				className="flex h-fit flex-col justify-center rounded-full p-2"
+				className="flex h-fit flex-col justify-center rounded p-2"
 				style={{
 					backgroundColor: IconBG,
 				}}
