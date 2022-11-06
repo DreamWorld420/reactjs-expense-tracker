@@ -5,6 +5,7 @@ import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 import StatsCard from "components/stats/StatsCard";
 import HomeTransactions from "components/transactions/HomeTransactions";
 import currencyFormatter from "utils/currencyFormatter";
+import SectionTitle from "components/shared/SectionTitle";
 
 const Home: React.FC = () => {
 	const balance = useSelector((state: RootState) => state.balance.value);
@@ -16,7 +17,7 @@ const Home: React.FC = () => {
 			</h1>
 			<section className="mt-16 flex grow flex-col px-8">
 				<section>
-					<h2 className="font-oswald tracking-wider">Stats</h2>
+					<SectionTitle>Stats</SectionTitle>
 					<section className="mt-2 flex gap-x-4">
 						<StatsCard
 							icon={AiFillCaretUp}
@@ -37,9 +38,9 @@ const Home: React.FC = () => {
 					</section>
 				</section>
 				<section className="mt-4 mb-12 flex grow flex-col">
-					<h2 className="mb-2 font-oswald tracking-wider">
+					<SectionTitle className="mb-2">
 						Last Ten transactions
-					</h2>
+					</SectionTitle>
 					<HomeTransactions />
 				</section>
 			</section>

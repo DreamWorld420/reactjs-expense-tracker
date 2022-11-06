@@ -5,11 +5,14 @@ import { add } from "features/transactions/TransactionsSlice";
 import { withdraw, deposit } from "features/balance/balanceSlice";
 import { Transaction, TransactionType } from "types";
 import { $enum } from "ts-enum-util";
-import { capitalize, isNumber } from "lodash";
+import { capitalize } from "lodash";
+import SectionTitle from "components/shared/SectionTitle";
 
 const $TransactionType = $enum(TransactionType);
 
 const AddTransaction: React.FC = () => {
+	const dispatch = useAppDispatch();
+
 	const {
 		register,
 		handleSubmit,
@@ -18,7 +21,6 @@ const AddTransaction: React.FC = () => {
 	} = useForm<Transaction>({
 		mode: "onChange",
 	});
-	const dispatch = useAppDispatch();
 
 	const onSubmit = handleSubmit((data) => {
 		const type = Number(data.type);
@@ -33,9 +35,7 @@ const AddTransaction: React.FC = () => {
 
 	return (
 		<div className="flex grow flex-col justify-center px-8">
-			<h1 className="mb-2 font-oswald  tracking-wider">
-				Add Transaction
-			</h1>
+			<SectionTitle className="mb-2">Add Transaction</SectionTitle>
 			<form
 				onSubmit={onSubmit}
 				className="flex w-full flex-col gap-y-4 rounded bg-white p-4 font-robotoMono drop-shadow-2xl"
