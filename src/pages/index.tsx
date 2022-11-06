@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import AddTransaction from "./pages/AddTransaction";
-import Chart from "./pages/Chart";
-import Home from "./pages/Home";
-import Root from "./pages/Root";
-import Settings from "./pages/Settings";
-import Wallet from "./pages/Wallet";
+import AddTransaction from "./AddTransaction";
+import Chart from "./Chart";
+import Home from "./Home";
+import Root from "./Root";
+import Settings from "./Settings";
+import Wallet from "./Wallet";
 
 const router = createBrowserRouter([
 	{
