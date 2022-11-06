@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
 					</NavListItem>
 
 					{/* Add Button */}
-					<li className="flex flex-col justify-center">
+					<li className="flex flex-col justify-center transition-all hover:scale-110">
 						<Link className="flex flex-col justify-center" to="add">
 							<AiFillPlusCircle
 								size={45}

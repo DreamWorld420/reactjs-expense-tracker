@@ -6,8 +6,9 @@ const HomeTransactions: React.FC = () => {
 
 	if (!transactions.length) {
 		return (
-			<div className="shadow-4xl flex grow flex-col items-center justify-center rounded-2xl bg-white font-robotoMono drop-shadow-2xl">
+			<div className="shadow-4xl flex grow flex-col items-center justify-center rounded-2xl bg-white font-robotoMono leading-loose drop-shadow-2xl">
 				<p>No transactions found!</p>
+				<p>Try adding one</p>
 			</div>
 		);
 	}
