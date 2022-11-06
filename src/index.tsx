@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
-import router from "./pages";
+import { RouterProvider } from "react-router-dom";
+
+import { store } from "@App/store";
+
+import router from "@Pages/router";
+
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

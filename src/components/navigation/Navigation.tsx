@@ -1,13 +1,14 @@
 import React from "react";
 import {
 	AiFillHome,
-	AiFillWallet,
-	AiFillPlusCircle,
 	AiFillPieChart,
+	AiFillPlusCircle,
 	AiFillSetting,
+	AiFillWallet,
 } from "react-icons/ai";
-import NavListItem from "./NavListItem";
 import { Link } from "react-router-dom";
+
+import NavListItem from "@Components/navigation/NavListItem";
 
 const Navigation: React.FC = () => {
 	return (

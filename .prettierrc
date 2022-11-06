@@ -1,0 +1,16 @@
+{
+	"useTabs": true,
+	"tabWidth": 4,
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@App/.*$",
+		"^@Features/.*$",
+		"^@Types/.*$",
+		"^@Pages/.*$",
+		"^@Components/.*$",
+		"^@Utils/.*$",
+		"^.*css$"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}

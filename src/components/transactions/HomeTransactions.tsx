@@ -1,6 +1,8 @@
 import React from "react";
-import { useAppSelector } from "app/hooks";
-import TransactionCard from "./TransactionCard";
+
+import { useAppSelector } from "@App/hooks";
+
+import TransactionCard from "@Components/transactions/TransactionCard";
 
 const HomeTransactions: React.FC = () => {
 	const lastTenTransactions = useAppSelector((state) =>

@@ -1,5 +1,6 @@
-import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { Transaction } from "types";
+import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
+
+import Transaction from "@Types/Transaction.interface";
 
 type TransactionsInitialState = {
 	value: Transaction[];

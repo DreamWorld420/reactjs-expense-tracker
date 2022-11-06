@@ -1,12 +1,16 @@
+import { capitalize } from "lodash";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useAppDispatch } from "@App/hooks";
-import { add } from "@Features/transactions/TransactionsSlice";
-import { withdraw, deposit } from "@Features/balance/balanceSlice";
-import Transaction from "@Types/Transaction.interface";
-import TransactionType from "@/types/TransactionType.enum";
 import { $enum } from "ts-enum-util";
-import { capitalize } from "lodash";
+
+import { useAppDispatch } from "@App/hooks";
+
+import { deposit, withdraw } from "@Features/balance/balanceSlice";
+import { add } from "@Features/transactions/TransactionsSlice";
+
+import Transaction from "@Types/Transaction.interface";
+import TransactionType from "@Types/TransactionType.enum";
+
 import SectionTitle from "@Components/shared/SectionTitle";
 
 const $TransactionType = $enum(TransactionType);
