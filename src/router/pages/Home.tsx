@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 				</section>
 				<section className="mt-4 mb-12 flex grow flex-col">
 					<h2 className="mb-2 font-oswald tracking-wider">
-						Last four transactions
+						Last Ten transactions
 					</h2>
 					<HomeTransactions />
 				</section>
