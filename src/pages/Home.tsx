@@ -1,10 +1,10 @@
 import React from "react";
 import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
-import StatsCard from "components/stats/StatsCard";
-import HomeTransactions from "components/transactions/HomeTransactions";
-import currencyFormatter from "utils/currencyFormatter";
-import SectionTitle from "components/shared/SectionTitle";
-import { useAppSelector } from "app/hooks";
+import StatsCard from "@Components/stats/StatsCard";
+import HomeTransactions from "@Components/transactions/HomeTransactions";
+import currencyFormatter from "@Utils/currencyFormatter";
+import SectionTitle from "@Components/shared/SectionTitle";
+import { useAppSelector } from "@App/hooks";
 
 const Home: React.FC = () => {
 	const balance = useAppSelector((state) => state.balance.value);

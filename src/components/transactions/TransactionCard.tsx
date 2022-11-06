@@ -1,5 +1,6 @@
 import React from "react";
-import { Transaction, TransactionType } from "types";
+import Transaction from "@Types/Transaction.interface";
+import TransactionType from "@Types/TransactionType.enum";
 import currencyFormatter from "utils/currencyFormatter";
 
 interface IProps {
