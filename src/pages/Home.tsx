@@ -1,14 +1,13 @@
-import { RootState } from "app/store";
 import React from "react";
-import { useSelector } from "react-redux";
 import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 import StatsCard from "components/stats/StatsCard";
 import HomeTransactions from "components/transactions/HomeTransactions";
 import currencyFormatter from "utils/currencyFormatter";
 import SectionTitle from "components/shared/SectionTitle";
+import { useAppSelector } from "app/hooks";
 
 const Home: React.FC = () => {
-	const balance = useSelector((state: RootState) => state.balance.value);
+	const balance = useAppSelector((state) => state.balance.value);
 
 	return (
 		<div className="flex grow flex-col">
