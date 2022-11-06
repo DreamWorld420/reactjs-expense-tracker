@@ -1,4 +1,4 @@
-import TransactionType from "./TransactionType.enum";
+import TransactionType from "@Types/TransactionType.enum";
 
 interface Transaction {
 	type: TransactionType;
