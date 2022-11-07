@@ -4,7 +4,7 @@ import { useAppSelector } from "@App/hooks";
 
 import TransactionCard from "@Components/transactions/TransactionCard";
 
-const HomeTransactions: React.FC = () => {
+const TransactionList: React.FC = () => {
 	const lastTenTransactions = useAppSelector((state) =>
 		state.transactions.value.slice(-10).reverse()
 	);
@@ -36,4 +36,4 @@ const HomeTransactions: React.FC = () => {
 	);
 };
 
-export default HomeTransactions;
+export default TransactionList;

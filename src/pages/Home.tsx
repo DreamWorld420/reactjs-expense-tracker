@@ -5,7 +5,7 @@ import { useAppSelector } from "@App/hooks";
 
 import SectionTitle from "@Components/shared/SectionTitle";
 import StatsCard from "@Components/stats/StatsCard";
-import HomeTransactions from "@Components/transactions/HomeTransactions";
+import TransactionList from "@/components/transactions/TransactionList";
 
 import currencyFormatter from "@Utils/currencyFormatter";
 
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
 					<SectionTitle className="mb-2">
 						Last Ten transactions
 					</SectionTitle>
-					<HomeTransactions />
+					<TransactionList />
 				</section>
 			</section>
 		</div>
