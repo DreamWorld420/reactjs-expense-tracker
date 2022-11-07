@@ -6,7 +6,7 @@ import TransactionCard from "@Components/transactions/TransactionCard";
 
 const HomeTransactions: React.FC = () => {
 	const lastTenTransactions = useAppSelector((state) =>
-		state.transactions.value.slice(-10)
+		state.transactions.value.slice(-10).reverse()
 	);
 
 	// No transaction available
